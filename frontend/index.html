@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudDrive - Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="auth-container glass-panel">
+    <div id="alert-box" class="hidden"></div>
+    
+    <div id="login-form">
+      <h2>Welcome Back</h2>
+      <form id="form-login">
+        <label>Username</label>
+        <input type="text" id="login-username" required>
+        
+        <label>Password</label>
+        <input type="password" id="login-password" required>
+        
+        <button type="submit">Log In</button>
+      </form>
+      <div class="toggle-auth">
+        Don't have an account? <a id="show-register">Sign Up</a>
+      </div>
+    </div>
+
+    <div id="register-form" class="hidden">
+      <h2>Create Account</h2>
+      <form id="form-register">
+        <label>Username</label>
+        <input type="text" id="register-username" required>
+        
+        <label>Password</label>
+        <input type="password" id="register-password" required>
+        
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="toggle-auth">
+        Already have an account? <a id="show-login">Log In</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudDrive - Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <div class="header">
+      <h1>My Drive <span style="font-size:1rem;color:var(--text-secondary)" id="user-greeting"></span></h1>
+      <button class="btn-danger" style="width:auto;" id="btn-logout">Logout</button>
+    </div>
+
+    <div id="alert-box" class="hidden"></div>
+
+    <div class="upload-section glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <input type="file" id="file-input" required>
+      <button id="btn-upload">Upload File</button>
+    </div>
+
+    <div class="file-grid" id="file-list">
+      <!-- File cards injected here via JS -->
+    </div>
+  </div>
+
+  <!-- Share Modal -->
+  <div id="share-modal" class="modal-backdrop hidden">
+    <div class="glass-panel modal-content">
+      <h2>Shareable Link</h2>
+      <p style="margin-bottom:1rem; color:var(--text-secondary)">Anyone with this link can view the file.</p>
+      <div style="display:flex; gap:0.5rem; margin-bottom: 1.5rem;">
+        <input type="text" id="share-link-input" readonly>
+        <button id="btn-copy-link" style="width:auto;">Copy</button>
+      </div>
+      <button class="btn-secondary" id="btn-close-modal">Close</button>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
